@@ -7,7 +7,8 @@
 // abstract class because it does not implement the evaluate function. It contains one static (class)
 // function parse that parses an operand as either a literal or variable.
 
-class Operand: public Expression {
+class Operand : public Expression
+{
 public:
-    static Expression* parse(stringstream& in);
+    static Expression *parse(stringstream &in);
 };

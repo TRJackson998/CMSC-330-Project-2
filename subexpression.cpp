@@ -17,26 +17,28 @@ using namespace std;
 #include "plus.h"
 #include "minus.h"
 
-SubExpression::SubExpression(Expression* left, Expression* right) {
+SubExpression::SubExpression(Expression *left, Expression *right)
+{
     this->left = left;
     this->right = right;
 }
 
-Expression* SubExpression::parse(stringstream& in) {
-    Expression* left;
-    Expression* right;
+Expression *SubExpression::parse(stringstream &in)
+{
+    Expression *left;
+    Expression *right;
     char operation, paren;
-    
+
     left = Operand::parse(in);
     in >> operation;
     right = Operand::parse(in);
     in >> paren;
-    switch (operation) {
-        case '+':
-            return new Plus(left, right);
-        case '-':
-            return new Minus(left, right);
+    switch (operation)
+    {
+    case '+':
+        return new Plus(left, right);
+    case '-':
+        return new Minus(left, right);
     }
     return 0;
 }
-        
