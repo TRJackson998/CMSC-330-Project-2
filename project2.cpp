@@ -39,6 +39,7 @@ int main()
 	}
 	while (true)
 	{
+		symbolTable = SymbolTable();
 		fin.getline(line, SIZE);
 		if (!fin)
 			break;
