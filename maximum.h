@@ -18,8 +18,6 @@ is defined in maximum.cpp.
 class Maximum : public SubExpression
 {
 public:
-    Maximum(Expression *left, Expression *right) : SubExpression(left, right)
-    {
-    }
+    Maximum(Expression *left, Expression *right) : SubExpression(left, right) {}
     double evaluate();
 };

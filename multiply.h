@@ -19,11 +19,6 @@ by returning the multiplication of the values of the two subexpressions.
 class Multiply : public SubExpression
 {
 public:
-    Multiply(Expression *left, Expression *right) : SubExpression(left, right)
-    {
-    }
-    double evaluate()
-    {
-        return left->evaluate() * right->evaluate();
-    }
+    Multiply(Expression *left, Expression *right) : SubExpression(left, right) {}
+    double evaluate() { return left->evaluate() * right->evaluate(); }
 };

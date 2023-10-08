@@ -10,10 +10,7 @@
 class Variable : public Operand
 {
 public:
-    Variable(string name)
-    {
-        this->name = name;
-    }
+    Variable(string name) { this->name = name; }
     double evaluate();
 
 private:

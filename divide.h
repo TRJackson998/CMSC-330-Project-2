@@ -19,11 +19,6 @@ by returning the division of the values of the two subexpressions.
 class Divide : public SubExpression
 {
 public:
-    Divide(Expression *left, Expression *right) : SubExpression(left, right)
-    {
-    }
-    double evaluate()
-    {
-        return left->evaluate() / right->evaluate();
-    };
+    Divide(Expression *left, Expression *right) : SubExpression(left, right) {}
+    double evaluate() { return left->evaluate() / right->evaluate(); };
 };

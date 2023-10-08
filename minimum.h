@@ -18,8 +18,6 @@ is defined in minimum.cpp.
 class Minimum : public SubExpression
 {
 public:
-    Minimum(Expression *left, Expression *right) : SubExpression(left, right)
-    {
-    }
+    Minimum(Expression *left, Expression *right) : SubExpression(left, right) {}
     double evaluate();
 };

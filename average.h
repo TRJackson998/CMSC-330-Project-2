@@ -18,8 +18,6 @@ is defined in average.cpp.
 class Average : public SubExpression
 {
 public:
-    Average(Expression *left, Expression *right) : SubExpression(left, right)
-    {
-    }
+    Average(Expression *left, Expression *right) : SubExpression(left, right) {}
     double evaluate();
 };
