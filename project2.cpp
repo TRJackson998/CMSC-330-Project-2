@@ -1,12 +1,20 @@
-// CMSC 330 Advanced Programming Languages
-// Project 2 Skeleton
-// UMGC CITE
-// Spring 2023
+/*
+Jackson, Terrence
+CMSC 330 Project 2
+10.08.2023
 
-// This file contains the main function for the project 2 skeleton. It reads an input file named input.txt
-// that contains one statement that includes an expression following by a sequence of variable assignments.
-// It parses each statement and then evaluates it.
+CMSC 330 Advanced Programming Languages
+Project 2 Skeleton
+UMGC CITE
+Spring 2023
 
+This file contains the main function for the project 2 skeleton. It reads an input file named input.txt
+that contains one statement that includes an expression following by a sequence of variable assignments.
+It parses each statement and then evaluates it.
+
+Additions:
+	init symbol table
+*/
 #include <iostream>
 #include <fstream>
 #include <sstream>
