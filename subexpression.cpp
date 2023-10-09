@@ -1,7 +1,7 @@
 /*
 Jackson, Terrence
 CMSC 330 Project 2
-10.08.2023
+10.09.2023
 
 CMSC 330 Advanced Programming Languages
 Project 2 Skeleton
@@ -61,7 +61,7 @@ Expression *SubExpression::parse(stringstream &in)
     case '~':
         // unary op
         in >> paren;
-        return new Negation(left, left);
+        return new Negation(left);
     case '+':
         // binary ops
         right = Operand::parse(in);
