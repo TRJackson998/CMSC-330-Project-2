@@ -1,7 +1,26 @@
 # CMSC-330-Project-2
  Second project for my CMSC 330 Advanced Programming Languages class, taken in 2023 at UMGC
-
- See Requirements.pdf for the original task set by the professor
-
+ 
  Ran this command to link all files into an executable:
  ```g++ project2.cpp operand.cpp parse.cpp subexpression.cpp symboltable.cpp variable.cpp minimum.cpp maximum.cpp average.cpp ternary.cpp quaternary.cpp variableException.cpp -o project2.exe```
+
+# Note
+See Requirements.pdf for the assignment instructions
+
+# Project Report
+Approaching this project, my initial step was to set up all the provided C++ files in my Integrated Development Environment (IDE), ensuring that I had a clean workspace to work with. Following this, I attempted to run the script to get an overview of its functionality. It took several attempts and reading through some discussion posts before I was able to link all the cpp files together and successfully test run an input suggested by the professor. Once I had a basic understanding of the project and how to run it, I read through the document detailing the requirements of the project.
+
+With a general grasp of the project's scope, I began delving into the codebase, starting with the overall hierarchy. I analyzed the hierarchy and relationships between Expression, Subexpression, and the binary operators that were already implemented. As I began understanding these relationships, I started documenting my progress by leaving TODO comments to serve as reminders for future tasks and writing out questions on topics I had not yet figured out. One thing I was confused about was how to implement the various binary, ternary, etc operators. At first, I wondered whether I should rename the Subexpression class and create more classes for each. Then I began considering overriding and overloading. Eventually I realized that every subexpression is at least a left and an operand. From there, I was able to determine how to implement all the operations by extending the Subexpression class and creating new header and cpp files for each operation’s child class. 
+
+During my work implementing each of the operators, I encountered a few small issues. One was how to use the modulus operator when it cannot perform calculations on doubles. I decided that static casting to integers would be the least intrusive way to accomplish my goals, and since the requirements state that we should assume our input is correct, then I can assume that no one will try to use the modulus with floating point numbers. I came to a similar conclusion when I considered whether to include error handling for dividing by 0. Once I got to the ternary operator, I encountered an issue with variable storage. This was easily solved by working on another one of the requirements: initializing the symbol table with each new line. Each of the rest of the operations ran into issues that were similarly solved by variable input and storage requirements switching from integers to doubles. 
+
+From there I moved on to the issue of variable naming and initializing. I created a new class to throw the exceptions outlined in the requirements. It took some time and debugging to find the appropriate places to throw these errors.
+
+In summary, my approach to this project was methodical and structured. I began by setting up the environment, testing the existing script, and thoroughly understanding the project's requirements. I relied on debugging tools to navigate the codebase, left TODO comments to track tasks, and addressed each challenge as it arose. This iterative and organized approach allowed me to successfully complete the project, overcoming challenges related to calculation and subclass implementation while ensuring that the code met all the specified requirements.
+
+# Project Reflection
+Since the previous project was focused on the aspects of parsing and grammar handling, I was able to focus much more on other aspects of this assignment. Implementing the semantics for new binary and unary operators was a crucial aspect of the project. Understanding the behavior of each operator and translating it into code is a fundamental skill for language designers and compiler developers. I dealt with arithmetic and conditional operators, which are essential concepts in programming languages. As I modified the program, I encountered requirements for error reporting. Handling uninitialized variables and detecting variables initialized more than once required implementing robust error handling mechanisms. I also learned about creating exception classes to manage and report errors systematically. Error handling is a crucial aspect of software development, ensuring the reliability and robustness of programs.
+
+The biggest challenge for me personally was file organization and compiling. C++ has some unique qualities to it that make it different from working with Java projects. The project's requirement to organize each new class into separate files emphasized good code organization and modularity. This practice promotes code maintainability and reusability, making it easier to work collaboratively on larger projects and update specific components without affecting the entire codebase. However, as it has been several years since I have had to work with a modular C++ project, there was a bit of a learning curve when it came to creating separate files and linking them together into a functional executable. 
+
+
