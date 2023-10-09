@@ -75,7 +75,7 @@ void parseAssignments(stringstream &in)
 {
 	char assignop, delimiter;
 	string variable;
-	int value;
+	double value;
 	do
 	{
 		variable = parseName(in);
