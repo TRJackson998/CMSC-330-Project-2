@@ -1,7 +1,7 @@
 /*
 Jackson, Terrence
 CMSC 330 Project 2
-10.08.2023
+10.09.2023
 
 CMSC 330 Advanced Programming Languages
 Project 2 Skeleton
@@ -14,6 +14,8 @@ It parses each statement and then evaluates it.
 
 Additions:
 	init symbol table
+	read in variables as doubles
+	throw variable exception if a variable is reinitialized
 */
 #include <iostream>
 #include <fstream>
@@ -26,6 +28,7 @@ using namespace std;
 #include "subexpression.h"
 #include "symboltable.h"
 #include "parse.h"
+#include "variableException.h"
 
 SymbolTable symbolTable;
 
@@ -79,6 +82,10 @@ void parseAssignments(stringstream &in)
 	do
 	{
 		variable = parseName(in);
+		if (symbolTable.lookUp(variable) != -1)
+		{
+			throw VariableException("reinitialized");
+		}
 		in >> ws >> assignop >> value >> delimiter;
 		symbolTable.insert(variable, value);
 	} while (delimiter == ',');
