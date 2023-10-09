@@ -3,11 +3,6 @@ Jackson, Terrence
 CMSC 330 Project 2
 10.07.2023
 
-CMSC 330 Advanced Programming Languages
-Project 2 Skeleton
-UMGC CITE
-Spring 2023
-
 This file contains the body of the function contained in the Maximum class.
 The evaluate function returns the left subexpression when it is greater than the right,
 and returns the right subexpression otherwise

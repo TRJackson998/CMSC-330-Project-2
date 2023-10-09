@@ -3,11 +3,6 @@ Jackson, Terrence
 CMSC 330 Project 2
 10.08.2023
 
-CMSC 330 Advanced Programming Languages
-Project 2 Skeleton
-UMGC CITE
-Spring 2023
-
 This file contains the body of the function contained in the Quaternary class,
 as well as the constructor for the class. The constructor initializes the left
 and right subexpressions by calling the constructor of the SubExpression class,
